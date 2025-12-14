@@ -172,7 +172,7 @@ To stop the containers AND delete all data stored in the `postgres-employees-dat
 #### Run the backend with the default h2 profile
 With the default profile, the data is stored in a h2 db in `./employees-fullstack/data`
 
-The h2 console is available here:
+The h2 console is available here:  
 [http://localhost:8090/h2](http://localhost:8090/h2)
 
 ### ▶️ Running the frontend
@@ -180,6 +180,7 @@ The h2 console is available here:
 ```bash
    cd ./angular-frontend/employees-ui/
 ```
+[http://localhost:4200/](http://localhost:4200/)
 
 #### 1. Run without the Angular proxy (direct backend calls — CORS enabled)
 This mode makes the browser call the backend at `http://localhost:8090` directly from `http://localhost:4200`, so the origins are different.  
@@ -204,8 +205,6 @@ This mirrors the behavior obtained when the application is served directly by th
 ```bash
 ng serve --configuration=proxy
 ```
-
-[http://localhost:4200/](http://localhost:4200/)
 
 Or you can run the frontend using the IntelliJ run configuration provided in the `.idea/runConfigurations` folder.  
 👉 [employees-ui \[start proxy - no CORS\]](./.idea/runConfigurations/employees_ui__start_proxy___no_CORS_.xml)
