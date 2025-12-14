@@ -151,7 +151,8 @@ To use the PostgreSQL run configuration, make sure Docker Desktop is running, th
 ```bash
    docker compose up -d
 ```
-The pgadmin console is available here (you have to wait a bit after starting the containers):  
+The pgadmin console is available (you have to wait a bit after starting the containers).  
+To connect to this console, see the credentials in [application-postgres.yml](./sb-backend/src/main/resources/application-postgres.yml) and [docker-compose.yml](./docker-compose.yml), then go to:  
 [http://localhost:5050](http://localhost:5050)
 
 To stop the containers:
