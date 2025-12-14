@@ -1,4 +1,7 @@
 # Fullstack Reference Application
+[![CI](https://github.com/MorganShirl/employees-fullstack/actions/workflows/maven.yml/badge.svg)](
+https://github.com/MorganShirl/employees-fullstack/actions/workflows/maven.yml
+)
 
 ![Application screenshot](.screenshots/screen_1.png)
 
