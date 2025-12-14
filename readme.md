@@ -65,20 +65,20 @@ The frontend can also be run independently and communicate with the backend, mak
 
 ### 🅰️ Frontend (Angular 20)
 - Clean and predictable directory structure
-- TypeScript path aliases (`@env`, `@core`, `@shared`, `@features`) for readable and maintainable imports
+- TypeScript path aliases (`@env`, `@core`, `@shared`, `@features`) for readable and maintainable imports (see [tsconfig.json](./angular-frontend/employees-ui/tsconfig.json))
 - Standalone components
-- Angular **signals** for component-level state management
-- Angular Material integration with view transition effects (e.g. `withViewTransitions`) for smoother navigation
-- Optional Angular development proxy to demonstrate CORS vs same-origin setups via environment-based configuration
-- Client-side custom 404 page
+- Angular **signals** for component-level state management (see [employee-list.store.ts](./angular-frontend/employees-ui/src/app/features/employee/pages/list/employee-list.store.ts))
+- Angular Material integration with view transition effects (e.g. `withViewTransitions`) for smoother navigation (see [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts))
+- Optional Angular development proxy to demonstrate CORS vs same-origin setups via environment-based configuration (see [environment.ts](./angular-frontend/employees-ui/src/environments/environment.ts) and [environment.proxy.ts](./angular-frontend/employees-ui/src/environments/environment.proxy.ts))
+- Client-side custom 404 page (see [not-found.page.html](./angular-frontend/employees-ui/src/app/shared/pages/404/not-found.page.html))
 - Automatic restoration of an existing backend session on application startup or page refresh
-- Multilingual support (English and French), including UI text and browser tab titles
-- Global HTTP error interceptor that:
+- Multilingual support (English and French), including UI text and browser tab titles (see [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts) and [i18n-title-strategy.ts](./angular-frontend/employees-ui/src/app/core/i18n/i18n-title-strategy.ts))
+- Global HTTP error interceptor (see [error.interceptor.ts](./angular-frontend/employees-ui/src/app/core/interceptors/error.interceptor.ts)) that:
     - maps backend `ProblemDetail` responses
     - logs errors to the console
-    - displays user-friendly messages via snackbars
-- Route guards enforcing authentication and redirecting unauthenticated users to the login page
-- **XSRF/CSRF** token forwarding via a custom Http interceptor that reads the XSRF-TOKEN cookie and attaches it as X-XSRF-TOKEN only for backend API calls (supports proxy and CORS setups).
+    - displays user-friendly messages via snackbars (see [notification.service.ts](./angular-frontend/employees-ui/src/app/core/services/notification.service.ts))
+- Route guards enforcing authentication and redirecting unauthenticated users to the login page (see [auth.guard.ts](./angular-frontend/employees-ui/src/app/core/guards/auth.guard.ts))
+- **XSRF/CSRF** token forwarding via a custom Http interceptor (see [xsrf.interceptor.ts](./angular-frontend/employees-ui/src/app/core/interceptors/xsrf.interceptor.ts)) that reads the XSRF-TOKEN cookie and attaches it as X-XSRF-TOKEN only for backend API calls (supports proxy and CORS setups). 
 
 ---
 
