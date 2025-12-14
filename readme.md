@@ -46,17 +46,17 @@ The frontend can also be run independently and communicate with the backend, mak
     - `postgres`: PostgreSQL via Docker Compose (with pgAdmin web console)
 - Caching of read-only HTTP requests using **Caffeine**
 - Consistent, structured error handling using Spring `ProblemDetail` and a global `@RestControllerAdvice`
-- Session-based authentication using `JSESSIONID`
+- Session-based authentication using `JSESSIONID` (see [SecurityConfig.java](./sb-backend/src/main/java/com/morgan/backend/config/SecurityConfig.java))
 - HTTP requests handled using **virtual threads**
 - REST API following proper HTTP semantics (verbs, status codes, etc.)
 - Actuator endpoints exposed on a **separate port**
 - OpenAPI specification with **Swagger UI**
-- Centralized CORS configuration allowing cross-origin requests from `http://localhost:4200` (see [application.yml](./sb-backend/src/main/resources/application.yml))
+- Centralized CORS configuration allowing cross-origin requests from `http://localhost:4200` (see [application.yml](./sb-backend/src/main/resources/application.yml) and [CorsConfig.java](./sb-backend/src/main/java/com/morgan/backend/config/CorsConfig.java))
 - CSRF protection enabled for additional security
 - SPA fallback routing to support client-side routes (frontend-managed 404s)
 - Custom logging configuration with separate application and SQL log files (see [logback-spring.xml](./sb-backend/src/main/resources/logback-spring.xml))
     - Log level for these files are configured centrally in [application.yml](./sb-backend/src/main/resources/application.yml)
-    - Each request is tagged with a unique request ID using MDC (see [MdcRequestIdFilter.java](./sb-backend/src/main/java/com/morgan/backend/filters/MdcRequestIdFilter.java)  )
+    - Each request is tagged with a unique request ID using MDC (see [MdcRequestIdFilter.java](./sb-backend/src/main/java/com/morgan/backend/filters/MdcRequestIdFilter.java))
 - Comprehensive testing setup:
     - Unit tests with **Mockito**
     - MockMvc tests
