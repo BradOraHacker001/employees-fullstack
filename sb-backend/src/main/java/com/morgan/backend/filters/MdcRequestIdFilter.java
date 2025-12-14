@@ -32,7 +32,7 @@ public class MdcRequestIdFilter extends OncePerRequestFilter {
             String requestId = request.getHeader(HEADER_REQUEST_ID);
 
             if (isEmpty(requestId)) {
-                requestId = this.uuidSupplier.get();
+                requestId = uuidSupplier.get();
             }
 
             MDC.put(REQUEST_ID, requestId);
