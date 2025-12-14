@@ -44,16 +44,16 @@ The frontend can also be run independently and communicate with the backend, mak
 - Two supported databases, selected via Spring profiles:
     - `default`: embedded, file-based H2 (with H2 web console)
     - `postgres`: PostgreSQL via Docker Compose (with pgAdmin web console)
-- Caching of read-only HTTP requests using **Caffeine**
-- Consistent, structured error handling using Spring `ProblemDetail` and a global `@RestControllerAdvice`
-- Session-based authentication using `JSESSIONID` (see [SecurityConfig.java](./sb-backend/src/main/java/com/morgan/backend/config/SecurityConfig.java))
-- HTTP requests handled using **virtual threads**
-- REST API following proper HTTP semantics (verbs, status codes, etc.)
+- Caching of read-only HTTP requests using **Caffeine** (see [EmployeeService.java](./sb-backend/src/main/java/com/morgan/backend/services/EmployeeService.java))
+- Consistent, structured error handling using Spring `ProblemDetail` and a global `@RestControllerAdvice` (see [GlobalExceptionHandler.java](./sb-backend/src/main/java/com/morgan/backend/exceptions/GlobalExceptionHandler.java))
+- Session-based authentication using `JSESSIONID` (see [SecurityConfig.java](./sb-backend/src/main/java/com/morgan/backend/config/SecurityConfig.java) and [AuthenticationController.java](./sb-backend/src/main/java/com/morgan/backend/controllers/AuthenticationController.java))
+- HTTP requests handled using **virtual threads** (see [AppInfoController.java](./sb-backend/src/main/java/com/morgan/backend/controllers/AppInfoController.java))
+- REST API (see [EmployeeController.java](./sb-backend/src/main/java/com/morgan/backend/controllers/EmployeeController.java)) following proper HTTP semantics (verbs, dto validity, status codes, etc.)
 - Actuator endpoints exposed on a **separate port**
 - OpenAPI specification with **Swagger UI**
 - Centralized CORS configuration allowing cross-origin requests from `http://localhost:4200` (see [application.yml](./sb-backend/src/main/resources/application.yml) and [CorsConfig.java](./sb-backend/src/main/java/com/morgan/backend/config/CorsConfig.java))
 - CSRF protection enabled for additional security
-- SPA fallback routing to support client-side routes (frontend-managed 404s)
+- SPA fallback routing (see [SpaForwardFilter.java](./sb-backend/src/main/java/com/morgan/backend/filters/SpaForwardFilter.java)) to support client-side routes (frontend-managed 404s)
 - Custom logging configuration with separate application and SQL log files (see [logback-spring.xml](./sb-backend/src/main/resources/logback-spring.xml))
     - Log level for these files are configured centrally in [application.yml](./sb-backend/src/main/resources/application.yml)
     - Each request is tagged with a unique request ID using MDC (see [MdcRequestIdFilter.java](./sb-backend/src/main/java/com/morgan/backend/filters/MdcRequestIdFilter.java))
