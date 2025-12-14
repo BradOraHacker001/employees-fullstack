@@ -22,6 +22,21 @@ const isMutatingRequest = (method: string): boolean =>
 const isApiRequest = (url: string): boolean =>
     url.startsWith(API_BASE_URL + '/');
 
+/**
+ * XSRF interceptor for API calls using absolute (potentially cross-origin) URLs.
+ *
+ * Angular's built-in XSRF protection only attaches the `X-XSRF-TOKEN` header
+ * automatically for mutating requests (POST/PUT/PATCH/DELETE) to
+ * same-origin or relative URLs.
+ *
+ * In this application, the backend is called via an absolute `apiBaseUrl`
+ * (which is cross-origin in development, e.g. http://localhost:8090 while
+ * the SPA runs on http://localhost:4200),
+ * so Angular does NOT add the XSRF header automatically in this scenario.
+ *
+ * This interceptor explicitly reads the `XSRF-TOKEN` cookie and injects it
+ * as the `X-XSRF-TOKEN` header for mutating requests to our backend API.
+ */
 export const xsrfInterceptor: HttpInterceptorFn = (req, next) => {
     if (!isMutatingRequest(req.method)) {
         return next(req);
