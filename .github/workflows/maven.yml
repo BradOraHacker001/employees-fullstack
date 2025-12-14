@@ -33,7 +33,7 @@ jobs:
         cache: maven
         
     - name: Build (includes frontend via Maven)
-      run: ./mvnw -B clean verify
+      run: bash ./mvnw -B clean verify
       
     - name: Upload JAR
       uses: actions/upload-artifact@v4
