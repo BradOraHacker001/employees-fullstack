@@ -71,7 +71,7 @@ The frontend can also be run independently and communicate with the backend, mak
 - Angular Material integration with view transition effects (e.g. `withViewTransitions`) for smoother navigation (see [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts))
 - Optional Angular development proxy to demonstrate CORS vs same-origin setups via environment-based configuration (see [environment.ts](./angular-frontend/employees-ui/src/environments/environment.ts) and [environment.proxy.ts](./angular-frontend/employees-ui/src/environments/environment.proxy.ts))
 - Client-side custom 404 page (see [not-found.page.html](./angular-frontend/employees-ui/src/app/shared/pages/404/not-found.page.html))
-- Automatic restoration of an existing backend session on application startup or page refresh
+- Automatic restoration of an existing backend session on application startup or page refresh (see `provideAppInitializer` in [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts))
 - Multilingual support (English and French), including UI text and browser tab titles (see [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts) and [i18n-title-strategy.ts](./angular-frontend/employees-ui/src/app/core/i18n/i18n-title-strategy.ts))
 - Global HTTP error interceptor (see [error.interceptor.ts](./angular-frontend/employees-ui/src/app/core/interceptors/error.interceptor.ts)) that:
     - maps backend `ProblemDetail` responses
