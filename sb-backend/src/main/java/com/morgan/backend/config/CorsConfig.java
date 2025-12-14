@@ -40,10 +40,10 @@ public class CorsConfig implements WebMvcConfigurer {
      * Reads the list from app.cors.allowed-origins in application.yml
      */
     @ConfigurationProperties(prefix = "app.cors")
-    public record CorsConfigProperties(List<String> allowedOrigins) {
+    record CorsConfigProperties(List<String> allowedOrigins) {
         public CorsConfigProperties {
             if (allowedOrigins == null) {
-                allowedOrigins = List.of();
+                allowedOrigins = List.of(); // we don't want for allowedOrigins to ever be null
             }
         }
     }
