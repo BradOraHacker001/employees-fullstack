@@ -85,7 +85,9 @@ The frontend can also be run independently and communicate with the backend, mak
 ## 🛠️ Local Development
 
 ### 🧱 Building the project
-It is better to build the project using the Maven Wrapper to ensure that the correct Maven version is used.
+It is better to build the project using the Maven Wrapper to ensure that the correct Maven version is used (see [maven-wrapper.properties](.mvn/wrapper/maven-wrapper.properties)).  
+
+These commands are for Windows:  
 ```bash
    cd ./employees-fullstack/
 ```
