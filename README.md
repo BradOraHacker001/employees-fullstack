@@ -21,19 +21,23 @@ https://github.com/MorganShirl/employees-fullstack/actions/workflows/maven.yml
 
 This project is a **minimal but production-oriented reference application** intended to kickstart modern fullstack development.
 
-The project also demonstrates real-world security concerns such as
-**session-based authentication, CSRF/XSRF protection, and CORS vs proxy-based setups**
-between an Angular frontend and a Spring Boot backend.  
+It demonstrates real-world security concerns, including:
+
+- Session-based authentication
+- CSRF / XSRF protection
+- CORS vs proxy-based setups between an Angular frontend and a Spring Boot backend
 
 The emphasis is on **clarity, correctness, and modern best practices**, with sensible defaults and configuration files that include **only what is strictly required** for the application to run correctly.  
 
-In particular, the POM files, `.gitignore`, and `.editorconfig` are intentionally kept minimal and explicit.  
+In particular, the POM files, `.gitignore`, and `.editorconfig` are intentionally kept **minimal and explicit**.  
 
-The project uses the **Maven Wrapper** and a frontend Maven plugin to provision all required tooling locally.  
-As a result, the only prerequisite to build and run the project is a **Java 25 JDK**.
+## ℹ️ Project Information
 
-The project was developed using **IntelliJ IDEA Ultimate 2025**.  
-While other IDEs can be used, **IntelliJ** is recommended, as the repository includes IDE-specific run configurations and database connection files that are referenced in the `Local Development` section below.
+Build tooling is provisioned via the **Maven Wrapper** and a frontend Maven plugin.  
+As a result, the **only prerequisite** to build and run the project is a **Java 25 JDK**.
+
+Development was done using **IntelliJ IDEA Ultimate 2025**.  
+While other IDEs can be used, **IntelliJ** is recommended, as the repository includes IDE-specific run configurations and database connection files that are referenced in the `Development` section below.
 
 ## ✨ Key Features
 
@@ -75,9 +79,9 @@ The frontend can also be run independently and communicate with the backend, mak
 - TypeScript strict compiler options (see [tsconfig.json](./angular-frontend/employees-ui/tsconfig.json))
 - TypeScript path aliases (`@env`, `@core`, `@shared`, `@features`) for readable and maintainable imports (see [tsconfig.json](./angular-frontend/employees-ui/tsconfig.json))
 - Angular **signals** for component-level state management (see [employee-list.store.ts](./angular-frontend/employees-ui/src/app/features/employee/pages/list/employee-list.store.ts))
-- Standalone components like [employee-list.page.ts](./angular-frontend/employees-ui/src/app/features/employee/pages/list/employee-list.page.ts) that use a dedicated service [employee-api.service.ts](./angular-frontend/employees-ui/src/app/core/services/employee-api.service.ts)
+- Standalone components like [employee-list.page.ts](./angular-frontend/employees-ui/src/app/features/employee/pages/list/employee-list.page.ts) that use a dedicated service such as [employee-api.service.ts](./angular-frontend/employees-ui/src/app/core/services/employee-api.service.ts)
 - Angular Material integration with view transition effects (e.g. `withViewTransitions`) for smoother navigation (see [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts))
-- Optional Angular development proxy to demonstrate CORS vs same-origin setups via environment-based configuration (see [environment.ts](./angular-frontend/employees-ui/src/environments/environment.ts) and [environment.proxy.ts](./angular-frontend/employees-ui/src/environments/environment.proxy.ts) and [proxy.conf.json](./angular-frontend/employees-ui/proxy.conf.json))
+- Optional Angular development proxy to demonstrate CORS vs same-origin setups via environment-based configuration (see [environment.ts](./angular-frontend/employees-ui/src/environments/environment.ts), [environment.proxy.ts](./angular-frontend/employees-ui/src/environments/environment.proxy.ts), and [proxy.conf.json](./angular-frontend/employees-ui/proxy.conf.json))
 - Client-side custom 404 page (see [not-found.page.html](./angular-frontend/employees-ui/src/app/shared/pages/404/not-found.page.html))
 - Automatic restoration of an existing backend session on application startup or page refresh (see `provideAppInitializer` in [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts))
 - Multilingual support (English and French), including UI text and browser tab titles (see [app.config.ts](./angular-frontend/employees-ui/src/app/app.config.ts) and [i18n-title-strategy.ts](./angular-frontend/employees-ui/src/app/core/i18n/i18n-title-strategy.ts))
@@ -90,7 +94,7 @@ The frontend can also be run independently and communicate with the backend, mak
 
 ---
 
-## 🛠️ Local Development
+## 🛠️ Development
 
 ### 🧱 Building the project
 It is better to build the project using the Maven Wrapper to ensure that the correct Maven version is used (see [maven-wrapper.properties](.mvn/wrapper/maven-wrapper.properties)).  

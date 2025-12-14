@@ -25,17 +25,17 @@ class EmployeeServiceTest {
     @Test
     void testCreateEmployee() {
         // given
-        Employee employee = new Employee();
-        employee.setFirstName("Morgan");
+        Employee newEmployee = new Employee();
+        newEmployee.setFirstName("Morgan");
 
-        when(employeeRepository.save(employee)).thenAnswer(invocation -> invocation.getArgument(0));
+        when(employeeRepository.save(newEmployee)).thenAnswer(invocation -> invocation.getArgument(0));
 
         // when
-        Employee result = employeeService.create(employee);
+        Employee result = employeeService.create(newEmployee);
 
         // then
         assertThat(result).isNotNull();
-        assertThat(result.getFirstName()).isEqualTo(employee.getFirstName());
-        verify(employeeRepository, times(1)).save(employee);
+        assertThat(result.getFirstName()).isEqualTo(newEmployee.getFirstName());
+        verify(employeeRepository, times(1)).save(newEmployee);
     }
 }

@@ -1,4 +1,4 @@
-# Backend
+# General
 **/target/
 **/logs/
 **/data/
@@ -10,13 +10,13 @@
 **/dist/
 
 # IntelliJ
-# Ignore everything in .idea
-.idea/*
-
 # Ignore IntelliJ module files
 *.iml
 
-# Re-allow specific files
+# Ignore everything in .idea
+.idea/*
+
+# Re-allow specific files inside .idea/
 !.idea/dataSources.xml
 !.idea/runConfigurations/
 !.idea/runConfigurations/*.xml
