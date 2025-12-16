@@ -40,7 +40,7 @@ In particular, the POM files,
 [styles.scss](./angular-frontend/employees-ui/src/styles.scss) 
 are intentionally kept **minimal and explicit**.  
 
-In other words, there is no dead code.  
+In other words, **there is no dead** code.  
 
 ## ℹ️ Project Information
 
